@@ -3,218 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yang Luo | Portfolio</title>
+    <title>Yang Luo | HKU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #0366d6;
-            --bg-color: #f9f9f9;
-            --text-color: #333;
+            --primary-color: #24292e;
+            --link-color: #0366d6;
+            --bg-color: #ffffff;
+            --sidebar-width: 280px;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            background-color: #fff;
         }
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eaecef;
+
+        /* 布局容器 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px 20px;
         }
-        h1 {
-            margin-bottom: 10px;
+
+        /* 左侧侧边栏 */
+        .sidebar {
+            width: var(--sidebar-width);
+            padding-right: 40px;
+            text-align: left;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #eee;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .profile-name {
+            font-size: 1.8em;
+            font-weight: bold;
             color: var(--primary-color);
-            font-size: 2.5em;
+            margin: 10px 0 5px 0;
         }
-        .subtitle {
+
+        .profile-bio {
             color: #666;
-            font-size: 1.2em;
             margin-bottom: 20px;
         }
-        .contact-info a {
-            margin: 0 10px;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        section {
-            background: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        .item {
-            margin-bottom: 25px;
-        }
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-        }
-        .item-title {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #24292e;
-        }
-        .item-date {
-            color: #6a737d;
-            font-size: 0.9em;
-        }
-        .item-subtitle {
-            font-style: italic;
-            color: #586069;
-            margin-bottom: 8px;
-        }
-        ul {
-            padding-left: 20px;
-            margin-top: 5px;
-        }
-        li {
-            margin-bottom: 5px;
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
             font-size: 0.95em;
         }
-        .tags span {
+
+        .contact-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-list i {
+            margin-right: 10px;
+            color: #555;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-list a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .contact-list a:hover {
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+
+        /* 右侧主内容区 */
+        .main-content {
+            flex: 1;
+            min-width: 0; /* 防止内容溢出 */
+        }
+
+        /* 导航栏 (仿照截图风格) */
+        .navbar {
+            border-bottom: 1px solid #eaecef;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .navbar a {
+            color: #586069;
+            text-decoration: none;
+            margin-right: 25px;
+            font-weight: 500;
+            font-size: 1.1em;
+            padding-bottom: 8px;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* 内容区块 */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        h2 i {
+            margin-right: 10px;
+            color: #555;
+        }
+
+        .bio-text {
+            font-size: 1.05em;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        /* 列表样式 */
+        .list-item {
+            margin-bottom: 15px;
+        }
+
+        .list-title {
+            font-weight: 600;
+            color: var(--link-color);
+        }
+
+        .list-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        
+        .tag {
             display: inline-block;
             background: #f1f8ff;
             color: #0366d6;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            margin-right: 5px;
-            margin-top: 5px;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-left: 5px;
         }
-        @media (max-width: 600px) {
-            .item-header {
+
+        /* 手机端适配 */
+        @media (max-width: 768px) {
+            .container {
                 flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+                padding-right: 0;
+                margin-bottom: 40px;
+                border-bottom: 1px solid #eaecef;
+                padding-bottom: 20px;
+            }
+            .contact-list li {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Yang LUO</h1>
-        <div class="subtitle">M.Sc in Computer Science at HKU | AI & Quantitative Finance</div>
-        <div class="contact-info">
-            <a href="mailto:ryan.y.luo@connect.hku.hk">📧 ryan.y.luo@connect.hku.hk</a>
-            <a href="https://github.com/Rosirs">🐙 GitHub @Rosirs</a>
-        </div>
-    </header>
-
-    <section>
-        <h2>Education</h2>
+<div class="container">
+    
+    <div class="sidebar">
+        <img src="https://via.placeholder.com/200?text=Photo" alt="Yang Luo" class="avatar">
         
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">The University of Hong Kong (HKU)</span>
-                <span class="item-date">Sept 2025 - Present</span>
-            </div>
-            <div class="item-subtitle">Master of Science in Computer Science</div>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Jinan University (211)</span>
-                <span class="item-date">Sept 2021 - May 2025</span>
-            </div>
-            <div class="item-subtitle">B.Eng in Artificial Intelligence & B.Ec in Finance (Dual Degree)</div>
-            <ul>
-                <li>GPA: 3.66/5.0</li>
-                <li>Core Courses: Machine Learning, Deep Learning, Blockchain, AI Ethics</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
+        <div class="profile-name">Yang Luo</div>
+        <div class="profile-bio">M.Sc Student at HKU<br>AI & Quantitative Finance</div>
         
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Quantitative Trading Intern</span>
-                <span class="item-date">May 2025 - Aug 2025</span>
-            </div>
-            <div class="item-subtitle">Chengdu Mengxiang Technology Co., Ltd.</div>
+        <ul class="contact-list">
+            <li><i class="fas fa-university"></i> The University of Hong Kong</li>
+            <li><i class="fas fa-map-marker-alt"></i> Hong Kong, SAR</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:ryan.y.luo@connect.hku.hk">Email Me</a></li>
+            <li><i class="fab fa-github"></i> <a href="https://github.com/Rosirs">Github @Rosirs</a></li>
+            <li><i class="fas fa-graduation-cap"></i> <a href="#">Google Scholar</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        
+        <div class="navbar">
+            <a href="#" class="active">Homepage</a>
+            <a href="#">Publications</a>
+            <a href="#">Projects</a>
+            <a href="#">CV</a>
+        </div>
+
+        <div class="bio-text">
+            <p>
+                [cite_start]I am currently a Master of Science student in Computer Science at <strong>The University of Hong Kong (HKU)</strong>[cite: 4]. [cite_start]Previously, I received my B.Eng in Artificial Intelligence and B.Ec in Finance from <strong>Jinan University</strong>[cite: 4].
+            </p>
+            <p>
+                My research interests lie in <strong>Quantitative Finance</strong>, <strong>Machine Learning</strong>, and <strong>Natural Language Processing</strong>. [cite_start]I have experience in developing CTA strategies for commodity futures and building multi-agent systems for financial data analysis[cite: 25, 21].
+            </p>
+        </div>
+
+        <section>
+            <h2><i class="fas fa-fire" style="color: #e25555;"></i> News</h2>
             <ul>
-                <li>Designed and back-tested a CTA strategy across 14 commodity futures based on Time-Series Momentum.</li>
-                <li>Achieved an Annualized Return of 27% with a Sharpe Ratio of 1.6 and controlled Max Drawdown under 20%.</li>
-                <li>Engineered C++ execution modules: Reduced order latency by 8% through optimizing memory allocation.</li>
-                <li>Calibrated slippage models using Tick-level data to improve backtest fidelity.</li>
+                [cite_start]<li><strong>2025.09:</strong> Enrolled in HKU for M.Sc in Computer Science[cite: 4].</li>
+                [cite_start]<li><strong>2025.05:</strong> Completed Quant Trading Internship at Chengdu Mengxiang Technology[cite: 26].</li>
+                [cite_start]<li><strong>2024.10:</strong> Published a paper on Gold Price Prediction[cite: 6].</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Selected Projects</h2>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Autonomous Multi-Agent System for Unstructured Data</span>
-                <span class="item-date">Aug 2025 - Sep 2025</span>
+        <section>
+            <h2><i class="fas fa-book-open"></i> Publications</h2>
+            <div class="list-item">
+                <span class="list-title">A research of fine-tuning CNN-LSTM model for gold price prediction</span>
+                <br>
+                <strong>Yang Luo</strong>.
+                <span class="list-meta">Advances in Economics, Management and Political Sciences, 94, 157-163 (2024).</span>
+                 [cite_start][cite: 6, 7]
             </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-user-graduate"></i> Education</h2>
+            <div class="list-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <strong>The University of Hong Kong</strong>
+                    <span>2025 - Present</span>
+                </div>
+                <div>M.Sc in Computer Science (General Stream)</div>
+            </div>
+            <div class="list-item">
+                <div style="display:flex; justify-content:space-between;">
+                    <strong>Jinan University (211)</strong>
+                    <span>2021 - 2025</span>
+                </div>
+                [cite_start]<div>B.Eng in Artificial Intelligence & B.Ec in Finance (GPA: 3.66/5.0) [cite: 4]</div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-medal"></i> Honors & Awards</h2>
             <ul>
-                <li>Developed a production-grade agent system using a decoupled Dual-Agent architecture.</li>
-                <li>Optimized LLM control flow by integrating Chain-of-Thought reasoning and dynamic prompt construction.</li>
+                [cite_start]<li><strong>2024:</strong> Successful Participant, Mathematical Contest in Modelling (MCM)[cite: 32].</li>
+                [cite_start]<li><strong>2023:</strong> Outstanding Student Leader Scholarship[cite: 33].</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Attention-based VLSTM for Financial Time-Series Forecasting</span>
-                <span class="item-date">Sep 2024 - May 2025</span>
+        <section>
+            <h2><i class="fas fa-laptop-code"></i> Selected Projects</h2>
+            
+            <div class="list-item">
+                <strong>Autonomous Multi-Agent System (NLP)</strong> <span class="tag">LLM</span> <span class="tag">Agent</span>
+                <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
+                    [cite_start]Developed a Dual-Agent architecture integrating Chain-of-Thought reasoning for precise intent-to-action mapping[cite: 21, 22].
+                </p>
             </div>
-            <ul>
-                <li>Proposed a novel Multi-scale VLSTM architecture integrated with Bahdanau Attention mechanism.</li>
-                <li>Reduced test loss by 9.07% at the 30-step horizon compared to vanilla LSTM.</li>
-            </ul>
-        </div>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">Multi-dimensional Random-Forest Model for Risk Assessment</span>
-                <span class="item-date">Aug 2024 - Jan 2025</span>
+            <div class="list-item">
+                <strong>CTA Strategy & C++ Execution Modules</strong> <span class="tag">C++</span> <span class="tag">Quant</span>
+                <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
+                    [cite_start]Designed a Time-Series Momentum strategy (Sharpe 1.6) and optimized memory allocation to reduce order latency by 8%[cite: 27, 28, 29].
+                </p>
             </div>
-            <ul>
-                <li>Built a 3-D financial panel (2014-2023) covering 3800+ A-share firms.</li>
-                <li>Trained Random-Forest regressors achieving a meta-model R² of 0.975.</li>
-            </ul>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Publications</h2>
-        <div class="item">
-            <div class="item-title">A research of fine-tuning CNN-LSTM model for gold price prediction</div>
-            <div class="item-subtitle">Advances in Economics, Management and Political Sciences (2024)</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <div class="item">
-            <div class="tags">
-                <span>Python (PyTorch, Pandas, NumPy)</span>
-                <span>C++</span>
-                <span>Java</span>
-                <span>Linux/Shell</span>
-                <span>Docker</span>
-                <span>Quantitative Finance</span>
-                <span>Machine Learning</span>
-            </div>
-        </div>
-    </section>
+    </div>
+</div>
 
 </body>
 </html>
