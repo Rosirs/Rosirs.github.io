@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
             --bg-color: #ffffff;
             --sidebar-width: 280px;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             margin: 0;
@@ -45,7 +46,7 @@
             object-fit: cover;
             border: 1px solid #eee;
             margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         .profile-name {
@@ -83,7 +84,7 @@
             color: #333;
             text-decoration: none;
         }
-        
+
         .contact-list a:hover {
             color: var(--link-color);
             text-decoration: underline;
@@ -92,7 +93,8 @@
         /* 右侧主内容区 */
         .main-content {
             flex: 1;
-            min-width: 0; /* 防止内容溢出 */
+            min-width: 0;
+            /* 防止内容溢出 */
         }
 
         /* 导航栏 (仿照截图风格) */
@@ -111,7 +113,8 @@
             padding-bottom: 8px;
         }
 
-        .navbar a:hover, .navbar a.active {
+        .navbar a:hover,
+        .navbar a.active {
             color: var(--primary-color);
             border-bottom: 2px solid var(--primary-color);
         }
@@ -155,7 +158,7 @@
             font-size: 0.9em;
             margin-left: 5px;
         }
-        
+
         .tag {
             display: inline-block;
             background: #f1f8ff;
@@ -171,6 +174,7 @@
             .container {
                 flex-direction: column;
             }
+
             .sidebar {
                 width: 100%;
                 text-align: center;
@@ -179,105 +183,119 @@
                 border-bottom: 1px solid #eaecef;
                 padding-bottom: 20px;
             }
+
             .contact-list li {
                 justify-content: center;
             }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    
-    <div class="sidebar">
-        <img src="https://via.placeholder.com/200?text=Photo" alt="Yang Luo" class="avatar">
-        
-        <div class="profile-name">Yang Luo</div>
-        <div class="profile-bio">M.Sc Student at HKU<br>AI & Quantitative Finance</div>
-        
-        <ul class="contact-list">
-            <li><i class="fas fa-university"></i> The University of Hong Kong</li>
-            <li><i class="fas fa-map-marker-alt"></i> Hong Kong, SAR</li>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:ryan.y.luo@connect.hku.hk">Email Me</a></li>
-            <li><i class="fab fa-github"></i> <a href="https://github.com/Rosirs">Github @Rosirs</a></li>
-            <li><i class="fas fa-graduation-cap"></i> <a href="#">Google Scholar</a></li>
-        </ul>
-    </div>
+    <div class="container">
 
-    <div class="main-content">
-        
-        <div class="navbar">
-            <a href="#" class="active">Homepage</a>
-            <a href="#">Publications</a>
-            <a href="#">Projects</a>
-            <a href="#">CV</a>
-        </div>
+        <div class="sidebar">
+            <img src="https://github.com/Rosirs/Rosirs.github.io/blob/main/avatar.jpg" alt="Yang Luo" class="avatar">
 
-        <div class="bio-text">
-            <p>
-                I am currently a Master of Science student in Computer Science at <strong>The University of Hong Kong (HKU)</strong>. Previously, I received my B.Eng in Artificial Intelligence and B.Ec in Finance from <strong>Jinan University</strong>.
-            </p>
-            <p>
-                My research interests lie in <strong>Quantitative Finance</strong>, <strong>Machine Learning</strong>, and <strong>Natural Language Processing</strong>. I have experience in developing CTA strategies for commodity futures and building multi-agent systems for financial data analysis[cite: 25, 21].
-            </p>
-        </div>
+            <div class="profile-name">Yang Luo</div>
+            <div class="profile-bio">M.Sc Student at HKU<br>AI & Quantitative Finance</div>
 
-        <section>
-            <h2><i class="fas fa-book-open"></i> Publications</h2>
-            <div class="list-item">
-                <span class="list-title">A research of fine-tuning CNN-LSTM model for gold price prediction</span>
-                <br>
-                <strong>Yang Luo</strong>.
-                <span class="list-meta">Advances in Economics, Management and Political Sciences, 94, 157-163 (2024).</span>
-                </div>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-user-graduate"></i> Education</h2>
-            <div class="list-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <strong>The University of Hong Kong</strong>
-                    <span>2025 - Present</span>
-                </div>
-                <div>M.Sc in Computer Science (General Stream)</div>
-            </div>
-            <div class="list-item">
-                <div style="display:flex; justify-content:space-between;">
-                    <strong>Jinan University (211)</strong>
-                    <span>2021 - 2025</span>
-                </div>
-                [cite_start]<div>B.Eng in Artificial Intelligence & B.Ec in Finance (GPA: 3.66/5.0) [cite: 4]</div>
-            </div>
-        </section>
-
-        <section>
-            <h2><i class="fas fa-medal"></i> Honors & Awards</h2>
-            <ul>
-                [cite_start]<li><strong>2024:</strong> Successful Participant, Mathematical Contest in Modelling (MCM)[cite: 32].</li>
-                [cite_start]<li><strong>2023:</strong> Outstanding Student Leader Scholarship[cite: 33].</li>
+            <ul class="contact-list">
+                <li><i class="fas fa-university"></i> The University of Hong Kong</li>
+                <li><i class="fas fa-map-marker-alt"></i> Hong Kong, SAR</li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:ryan.y.luo@connect.hku.hk">Email Me</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/Rosirs">Github @Rosirs</a></li>
+                <li><i class="fas fa-graduation-cap"></i> <a href="#">Google Scholar</a></li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2><i class="fas fa-laptop-code"></i> Selected Projects</h2>
-            
-            <div class="list-item">
-                <strong>Autonomous Multi-Agent System (NLP)</strong> <span class="tag">LLM</span> <span class="tag">Agent</span>
-                <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
-                    [cite_start]Developed a Dual-Agent architecture integrating Chain-of-Thought reasoning for precise intent-to-action mapping[cite: 21, 22].
+        <div class="main-content">
+
+            <div class="navbar">
+                <a href="#" class="active">Homepage</a>
+                <a href="#">Publications</a>
+                <a href="#">Projects</a>
+                <a href="#">CV</a>
+            </div>
+
+            <div class="bio-text">
+                <p>
+                    I am currently a Master of Science student in Computer Science at <strong>The University of Hong
+                        Kong (HKU)</strong>. Previously, I received my B.Eng in Artificial Intelligence and B.Ec in
+                    Finance from <strong>Jinan University</strong>.
+                </p>
+                <p>
+                    My research interests lie in <strong>Quantitative Finance</strong>, <strong>Machine
+                        Learning</strong>, and <strong>Natural Language Processing</strong>. I have experience in
+                    developing CTA strategies for commodity futures and building multi-agent systems for financial data
+                    analysis[cite: 25, 21].
                 </p>
             </div>
 
-            <div class="list-item">
-                <strong>CTA Strategy & C++ Execution Modules</strong> <span class="tag">C++</span> <span class="tag">Quant</span>
-                <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
-                    [cite_start]Designed a Time-Series Momentum strategy (Sharpe 1.6) and optimized memory allocation to reduce order latency by 8%[cite: 27, 28, 29].
-                </p>
-            </div>
-        </section>
+            <section>
+                <h2><i class="fas fa-book-open"></i> Publications</h2>
+                <div class="list-item">
+                    <span class="list-title">A research of fine-tuning CNN-LSTM model for gold price prediction</span>
+                    <br>
+                    <strong>Yang Luo</strong>.
+                    <span class="list-meta">Advances in Economics, Management and Political Sciences, 94, 157-163
+                        (2024).</span>
+                </div>
+            </section>
 
+            <section>
+                <h2><i class="fas fa-user-graduate"></i> Education</h2>
+                <div class="list-item">
+                    <div style="display:flex; justify-content:space-between;">
+                        <strong>The University of Hong Kong</strong>
+                        <span>2025 - Present</span>
+                    </div>
+                    <div>M.Sc in Computer Science (General Stream)</div>
+                </div>
+                <div class="list-item">
+                    <div style="display:flex; justify-content:space-between;">
+                        <strong>Jinan University (211)</strong>
+                        <span>2021 - 2025</span>
+                    </div>
+                    [cite_start]<div>B.Eng in Artificial Intelligence & B.Ec in Finance (GPA: 3.66/5.0) [cite: 4]</div>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-medal"></i> Honors & Awards</h2>
+                <ul>
+                    [cite_start]<li><strong>2024:</strong> Successful Participant, Mathematical Contest in Modelling
+                        (MCM)[cite: 32].</li>
+                    [cite_start]<li><strong>2023:</strong> Outstanding Student Leader Scholarship[cite: 33].</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-laptop-code"></i> Selected Projects</h2>
+
+                <div class="list-item">
+                    <strong>Autonomous Multi-Agent System (NLP)</strong> <span class="tag">LLM</span> <span
+                        class="tag">Agent</span>
+                    <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
+                        [cite_start]Developed a Dual-Agent architecture integrating Chain-of-Thought reasoning for
+                        precise intent-to-action mapping[cite: 21, 22].
+                    </p>
+                </div>
+
+                <div class="list-item">
+                    <strong>CTA Strategy & C++ Execution Modules</strong> <span class="tag">C++</span> <span
+                        class="tag">Quant</span>
+                    <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
+                        [cite_start]Designed a Time-Series Momentum strategy (Sharpe 1.6) and optimized memory
+                        allocation to reduce order latency by 8%[cite: 27, 28, 29].
+                    </p>
+                </div>
+            </section>
+
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>
