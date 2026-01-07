@@ -196,7 +196,7 @@
     <div class="container">
 
         <div class="sidebar">
-            <img src="https://github.com/Rosirs/Rosirs.github.io/blob/main/avatar.jpg" alt="Yang Luo" class="avatar">
+            <img src="profile.jpg" alt="Yang Luo" class="avatar">
 
             <div class="profile-name">Yang Luo</div>
             <div class="profile-bio">M.Sc Student at HKU<br>AI & Quantitative Finance</div>
@@ -229,7 +229,7 @@
                     My research interests lie in <strong>Quantitative Finance</strong>, <strong>Machine
                         Learning</strong>, and <strong>Natural Language Processing</strong>. I have experience in
                     developing CTA strategies for commodity futures and building multi-agent systems for financial data
-                    analysis[cite: 25, 21].
+                    analysis.
                 </p>
             </div>
 
@@ -252,22 +252,30 @@
                         <span>2025 - Present</span>
                     </div>
                     <div>M.Sc in Computer Science (General Stream)</div>
+                    <div style="font-size: 0.9em; color: #666;">Major in Computer Science</div>
                 </div>
                 <div class="list-item">
                     <div style="display:flex; justify-content:space-between;">
                         <strong>Jinan University (211)</strong>
                         <span>2021 - 2025</span>
                     </div>
-                    [cite_start]<div>B.Eng in Artificial Intelligence & B.Ec in Finance (GPA: 3.66/5.0) [cite: 4]</div>
+                    <div>B.Eng in Artificial Intelligence & B.Ec in Finance (GPA: 3.66/5.0)</div>
+                    <div style="font-size: 0.9em; color: #666;">
+                        Major: Artificial Intelligence (GPA: 3.66/5.0) | Minor: Finance<br>
+                        Selected Courses: Blockchain Technology and Applications, Machine Learning, Deep Learning, AI
+                        Ethics
+                    </div>
                 </div>
             </section>
 
             <section>
                 <h2><i class="fas fa-medal"></i> Honors & Awards</h2>
                 <ul>
-                    [cite_start]<li><strong>2024:</strong> Successful Participant, Mathematical Contest in Modelling
-                        (MCM)[cite: 32].</li>
-                    [cite_start]<li><strong>2023:</strong> Outstanding Student Leader Scholarship[cite: 33].</li>
+                    <li><strong>2024:</strong> Successful Participant, Mathematical Contest in Modelling (MCM).</li>
+                    <li><strong>2023:</strong> University-level Prize, College Student Innovation & Entrepreneurship
+                        Competition.</li>
+                    <li><strong>2021-2023:</strong> Outstanding Student Leader Scholarship, Outstanding Student
+                        Scholarship.</li>
                 </ul>
             </section>
 
@@ -275,21 +283,81 @@
                 <h2><i class="fas fa-laptop-code"></i> Selected Projects</h2>
 
                 <div class="list-item">
-                    <strong>Autonomous Multi-Agent System (NLP)</strong> <span class="tag">LLM</span> <span
-                        class="tag">Agent</span>
+                    <strong>Attention-based VLSTM for Financial Time-Series Forecasting</strong> <span class="tag">Deep
+                        Learning</span> <span class="tag">Research</span>
                     <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
-                        [cite_start]Developed a Dual-Agent architecture integrating Chain-of-Thought reasoning for
-                        precise intent-to-action mapping[cite: 21, 22].
+                    <ul style="margin: 5px 0 0 20px; padding: 0;">
+                        <li>Proposed a novel Multi-scale LSTM architecture integrated with Attention mechanism to
+                            capture long-term dependencies in non-stationary gold price data.</li>
+                        <li>Conducted rigorous experiments comparing vanilla LSTM; analyzed attention weights to
+                            identify key temporal lag features, reducing test loss by 9.07% at the 30-step horizon.</li>
+                        <li>Addressed data noise and outliers using robust scaling techniques, preventing model
+                            overfitting on historical regimes.</li>
+                    </ul>
                     </p>
                 </div>
 
                 <div class="list-item">
-                    <strong>CTA Strategy & C++ Execution Modules</strong> <span class="tag">C++</span> <span
-                        class="tag">Quant</span>
+                    <strong>Multi-dimensional Random-Forest Model for Enterprise Risk Assessment</strong> <span
+                        class="tag">Machine Learning</span> <span class="tag">Risk Mgmt</span>
                     <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
-                        [cite_start]Designed a Time-Series Momentum strategy (Sharpe 1.6) and optimized memory
-                        allocation to reduce order latency by 8%[cite: 27, 28, 29].
+                    <ul style="margin: 5px 0 0 20px; padding: 0;">
+                        <li>Built 3-D financial panel (2014-2023, 3,800+ A-share firms, 34 indicators); cleaned 200k
+                            annual reports & winsorised outliers.</li>
+                        <li>Selected 8 core ROE drivers from 30 ratio indicators via Pearson correlation and VIF
+                            analysis.</li>
+                        <li>Trained 9 yearly Random-Forest regressors, stacked by R²-weighted average; meta-model
+                            R²=0.975, MSE=0.0004.</li>
+                    </ul>
                     </p>
+                </div>
+
+                <div class="list-item">
+                    <strong>Autonomous Multi-Agent System (NLP Course Project)</strong> <span class="tag">LLM</span>
+                    <span class="tag">Agent</span>
+                    <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
+                    <ul style="margin: 5px 0 0 20px; padding: 0;">
+                        <li>Developed a production-grade agent system using a decoupled Dual-Agent architecture,
+                            separating high-level intent analysis from low-level API execution.</li>
+                        <li>Optimized LLM control flow by integrating Chain-of-Thought reasoning and dynamic prompt
+                            construction, achieving precise intent-to-action mapping.</li>
+                        <li>Enhanced system robustness by enforcing structured data validation and maintaining a
+                            transparent decision log.</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="list-item">
+                    <strong>Quant Trading Intern (Chengdu Mengxiang Technology)</strong> <span class="tag">C++</span>
+                    <span class="tag">Quant</span>
+                    <p style="margin: 5px 0; font-size: 0.95em; color: #444;">
+                    <ul style="margin: 5px 0 0 20px; padding: 0;">
+                        <li>Designed and back-tested a CTA strategy across 14 commodity futures based on Time-Series
+                            Momentum; achieved an Annualized Return of 27% with a Sharpe Ratio of 1.6.</li>
+                        <li>Engineered C++ execution modules: Reduced order latency by 8% through optimizing memory
+                            allocation and data structure alignment.</li>
+                    </ul>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-tools"></i> Skills</h2>
+                <div class="list-item">
+                    <span class="list-title">Languages</span>
+                    <br>
+                    English (Professional Working Proficiency), Chinese (Native)
+                </div>
+                <div class="list-item">
+                    <span class="list-title">Programming Languages</span>
+                    <br>
+                    Python (PyTorch, scikit-learn, Pandas, NumPy, Numba), C++, C, Java
+                </div>
+                <div class="list-item">
+                    <span class="list-title">Operating Systems</span>
+                    <br>
+                    Linux: Proficient in Linux-based remote development, Shell scripting, and environment management
+                    (Docker/Conda).
                 </div>
             </section>
 
